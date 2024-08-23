@@ -20,6 +20,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ErrorsController;
 
+Route::view('/', 'home')->middleware('auth')->name('home');//ruta que muestra la pagina principal
+
 
 // Restablecimiento de contraseña
 Route::controller(ResetPasswordController::class)->group(function () {

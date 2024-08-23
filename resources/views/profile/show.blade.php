@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layouts.app')
+@section('content')
     <script src="{{ asset('js/profile.js') }}"></script>
-    <title>Home</title>
-</head>
-<body>
-    poner un lapiz aqui arriba
-    agregar avatars para elegir una foto
+    {{-- poner un lapiz aqui arriba
+    agregar avatars para elegir una foto --}}
     <button onclick="enable" id="editProfile">Editar</button>
     <form action="{{ route('profile.update') }}" method="post">
         @csrf
@@ -38,5 +31,5 @@
         <summary>Borrar cuenta</summary>
         <a href="{{ route('profile.destroy') }}" method="GET">Borrar cuenta</a>
     </details>
-</body>
-</html>
+
+@endSection

@@ -26,38 +26,9 @@
                     @auth
                         <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                             <span class="sr-only">Open user menu</span>
-                            <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User profile picture">
+                            <img class="h-8 w-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6326/6326055.png" alt="User profile picture">
                         </button>
                         <!-- Cart Icon and Summary -->
-                    <div class="relative">
-                        <!-- Ícono del carrito -->
-                        <a href="#" id="cart-icon" class="relative text-gray-700 hover:text-gray-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L6 7h12l-1 6M7 13l1.5 6H16l1.5-6M5 21h14a2 2 0 002-2v-1H3v1a2 2 0 002 2z"/>
-                            </svg>
-                            <!-- Indicador de cantidad de productos en el carrito -->
-                            <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-500 rounded-full">{{ session('cart') ? count(session('cart')) : 0 }}</span>
-                        </a>
-
-                        <!-- Resumen del carrito (popup) -->
-                        <div id="cart-summary" class="absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg p-4 hidden">
-                            @if(session('cart'))
-                                <ul>
-                                    @foreach(session('cart') as $item)
-                                        <li class="flex justify-between mb-2">
-                                            <span>{{ $item['name'] }}</span>
-                                            <span>${{ $item['price'] }}</span>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                                <a href="{{ route('cart.checkout') }}" class="bg-blue-500 text-white px-4 py-2 rounded block text-center mt-4">
-                                    Ir al Checkout
-                                </a>
-                            @else
-                                <p class="text-gray-700">Tu carrito está vacío.</p>
-                            @endif
-                        </div>
-                    </div>
                     @endauth
                     @guest
                         <a href="{{ route('login') }}" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
@@ -92,13 +63,14 @@
         @yield('content')
     </main>
 
+    <br><br><br><br><br><br><br><br>
     <footer class="bg-gray-800 text-white py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <!-- Logo and Slogan -->
             <div class="mb-6 md:mb-0 text-center md:text-left">
-                <h2 class="text-2xl font-bold">Pasteleria Santa Barbara Dulce Sabor</h2>
-                <p class="text-gray-400">Endulzando tus momentos especiales desde 1998</p>
+                <h2 class="text-2xl font-bold">Extracurriculares UPP</h2>
+                <p class="text-gray-400">lorem input text</p>
             </div>
 
             <!-- Contact Information -->
